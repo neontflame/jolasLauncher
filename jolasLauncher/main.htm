@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html window-width="496dip" window-height="616dip" window-resizable="false">
+	<head>
+		<title>jolas.: Launchers Abound</title>
+		<meta content="pt-br" http-equiv="Content-Language">
+		<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+		<link rel="stylesheet" href="cssManeirao.css">
+	</head>
+	
+	<body>
+		<img src="elementos/jolauncherEscrita.png"/>
+		<img src="elementos/jolas_versao_eu_nao_sei_mano_dsculpa.png"/>
+		
+		<div class="bodier">
+			<div id="mainBody" class="coolBody game">
+				<a id="goToGame" href="#"><img src="blank.png" width="176" height="46"/></a>
+				<a id="goToOptions" href="#"><img src="blank.png" width="161" height="46"/></a>
+				<a id="goToAbout" href="#"><img src="blank.png" width="133" height="46"/></a>
+				
+				<div id="insideCoolBody">
+					<!-- Tela de jogo -->
+					<div id="gameInside">
+						<div id="changelog">
+aguarde ...
+						</div>
+						
+						<div style="float:left; display:table; width:200px; padding-left: 16px; margin-top: 8px;">
+							<button type="button" class="whiteButton" id="VerifyUpdate" disabled>Verificar atualizações</button>
+							<p>
+							Versão a baixar: 
+							<select name="versao" id="versaoJogo">
+								<option value="...">...</option>
+							</select>
+							</p>
+							<p style="margin-top: -16px; display: none;" id="fileStatus">Baixando arquivo.exe... (93/160 MB)</p>
+						</div>
+						
+						<div style="display:table; float:right;padding-right: 16px; margin-top: 8px;">
+							<button type="button" class="redButton" id="PlayWithoutUpdate" disabled>Jogar sem atualizar</button>
+							<br>
+							<button type="button" class="bigGreenButton" id="updateAndPlay" disabled>Atualizar e jogar</button>
+						</div>
+					</div>
+					
+					<!-- Tela de opções -->
+					<div id="optionsInside">
+						<div style="float: left;">
+							<p class="optionsTitle">Configurações</p>
+							<!-- opçoes do jogo -->
+							<div class="optionsBox" id="optsHere">
+								<p class="optionsTitleInside">Jogo</p>
+								Linguagem
+								<select name="lingua" id="gameLanguage">
+									<option value="pt_BR">Português (BR)</option>
+									<option value="en_US">English (US)</option>
+								</select>
+								<button type="button" id="changeLocation" style="width:178px;margin-top:4px;">Mudar localização do jogo</button>
+								<p id="gameLocation" style="color:#B7B7CC; text-align:left; margin-top: 2px; font-size: 12px;">C:/somethingsomething/O Launcher</p>
+								<!-- opçoes de hospedagem -->
+								<p class="optionsTitleInside">Servidor</p>
+								
+								<input type="checkbox" id="svHosting" name="svHosting"/> <label for="svHosting">Hospedar servidor dedicado</label>
+								<p style="color:#B7B7CC; margin-top: 2px; font-size: 12px;">(0.5.4 e acima apenas!)</p>
+								
+								Porta
+								<input type="number" id="svPort" name="svPort" min="1024" max="65535" value="7000" />
+								<label for="svPort" style="color:#B7B7CC; margin-top: 2px; font-size: 12px;">(de 1024 a 65535)</label>
+							</div>
+							<!-- fim das opçoes do jogo -->
+						</div>
+						<div style="float: right;">
+							<!-- mods do jogo -->
+							<p class="optionsTitle">Mods (0.10.0+)</p>
+							<div class="optionsBox" id="modsHere">
+							
+							</div>
+							<!-- fim dos mods do jogo -->
+						</div>
+					</div>
+					
+					<!-- Tela de sobre -->
+					<div id="aboutInside">
+						<center class="joLauncherAbout">
+							<b>jolas.</b>: Launchers Abound
+						</center>
+						<center>
+							Versão <b id="versionHere">Fuuuck eu nao sei</b>
+						</center>
+						<br>
+						<center>
+							<p>Programação e design por <span class="neon">Neon T. Flame</span><br>
+							Arte de destaque por <span class="sket">SketcherSquared</span></p>
+							<br>
+							<p class="especula"><:]> Especulativos 4eva</p>
+						</center>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	
+	<script type="module" src="scriptLegal.js"></script>
+</html>

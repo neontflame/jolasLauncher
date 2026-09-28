@@ -1,0 +1,285 @@
+
+@font-face {
+		font-family: 'jolas.Typing';
+		src: url('fontes/jolastypeface.ttf');
+}
+
+@font-face {
+		font-family: 'Comic Sans MS';
+		src: url('fontes/comic.ttf');
+}
+
+html {
+	overflow: hidden;
+}
+body {
+	margin: 0px;
+	width: 480px;
+	height: 600px;
+}
+
+.bodier {
+	background-image: url("elementos/coisoDeFundo.png");
+	height: 100%;
+	padding-top: 3px;
+}
+
+.coolBody {
+	height: 100%;
+	font-family: 'Arial', sans-serif;
+}
+
+#insideCoolBody {
+	margin-left: 4px;
+	margin-right: 4px;
+}
+
+/* Jogo */
+.coolBody.game {
+	background-image: url("elementos/papel/Jogo.png");
+	font-family: 'jolas.Typing';
+}
+
+#changelog {
+	overflow-y: scroll; 
+	height: 140px; 
+	font-family: 'Arial', sans-serif;
+	white-space: pre-wrap;
+}
+
+.whiteButton {
+	background-image: url("elementos/botaoBranco.png");
+	border: none;
+	background-color: #00000000;
+	width: 188px;
+	height: 42px;
+	
+	padding-right:10px;
+	
+	color: #3B7AE0;
+	font-family: 'jolas.Typing';
+	font-size:15px;
+}
+
+.whiteButton:hover {
+	background-image: url("elementos/botaoBrancoHover.png");
+}
+
+.whiteButton:active {
+	background-image: url("elementos/botaoBrancoPressed.png");
+}
+
+.redButton {
+	background-image: url("elementos/botaoVermelho.png");
+	border: none;
+	background-color: #00000000;
+	width: 188px;
+	height: 42px;
+	margin-bottom: -16px;
+	
+	padding-right:10px;
+	
+	color: white;
+	font-family: 'jolas.Typing';
+	font-size:15px;
+}
+
+.redButton:hover {
+	background-image: url("elementos/botaoVermelhoHover.png");
+}
+
+.redButton:active {
+	background-image: url("elementos/botaoVermelhoPressed.png");
+}
+
+.bigGreenButton {
+	background-image: url("elementos/botaoVerde.png");
+	border: none;
+	background-color: #00000000;
+	width: 189px;
+	height: 56px;
+	
+	padding-right:10px;
+	
+	color: white;
+	font-family: 'jolas.Typing';
+	font-size:15px;
+}
+
+.bigGreenButton:hover {
+	background-image: url("elementos/botaoVerdeHover.png");
+}
+
+.bigGreenButton:active {
+	background-image: url("elementos/botaoVerdePressed.png");
+}
+
+button:disabled {
+	filter: grayscale(100%);
+}
+
+#versaoJogo {
+	border: 2px solid #7F5012;
+	background-image: url("elementos/bgVersaoSelect.png");
+	background-size: 100% 100%;
+	color: white;
+	font-family: 'jolas.Typing';
+	padding: -3px;
+}
+
+#versaoJogo option {
+	background-color: #B26F2A;
+	background-size: 100% 100%;
+	border: 1px solid #7F5012;
+	outline:0px;
+}
+
+
+/* Opções */
+.coolBody.options {
+	background-image: url("elementos/papel/Opcoes.png");
+}
+
+#optionsInside {
+	display: flex;
+}
+
+.optionsTitle {
+	margin-left: 6px;
+	margin-bottom: 6px;
+	
+	color: #626270;
+	font-weight: bold;
+	font-size: 20px;
+	
+	letter-spacing: 2px;
+	line-height: -10px;
+}
+
+.optionsBox {
+	width: 210px;
+	height: 210px;
+	
+	background-color: #8A8A9E;
+	
+	border: 2px solid;
+	border-top: 8px solid;
+	border-color: #626270;
+	
+	margin-right: 6px;
+	padding: 4px;
+	
+	color: white;
+	text-align: center;
+}
+
+.optionsTitleInside {
+	margin-top: 0px;
+	margin-bottom: 4px;
+	
+	color: #626270;
+	font-weight: bold;
+	font-size: 16px;
+	
+	letter-spacing: 2px;
+}
+.optionsBox input[type=number] {
+	border: 2px solid #626270;
+	border-radius: 0%;
+	font-family: 'Arial', sans-serif;
+	background-color: white;
+}
+
+.optionsBox select, .optionsBox button {
+	border: 2px solid #626270;
+	background-image: url("elementos/bgOpcoesSelect.png");
+	background-size: 100% 100%;
+	font-family: 'Arial', sans-serif;
+	color: white;
+	border-radius: 0%;
+}
+
+.optionsBox button:hover {
+	border: 2px solid white;
+}
+
+.optionsBox button:active {
+	border: 2px solid black;
+}
+
+.optionsBox select option {
+	background-color: #8A8A9E;
+	background-size: 100% 100%;
+	border: 1px solid #626270;
+	outline:0px;
+}
+
+#modsHere {
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+.mod {
+	width: 98%;
+	min-height: 48px;
+	height: fit-content;
+	background-color: #8A8A9E;
+	padding-top: 2px;
+	padding-left: 2px;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+.mod:hover {
+	background-color: #B7B7CC;
+}
+
+.mod img {
+	margin-right: 4px;
+	display: table;
+}
+
+.mod p {
+	text-align: left;
+	line-height: 16px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.modName {
+	font-size: 16px;
+}
+.modCreator {
+	color:#626270;
+	font-size: 12px;
+}
+
+/* Sobre */
+.coolBody.about {
+	background-image: url("elementos/papel/Sobre.png");
+	font-size: 13px;
+}
+
+.joLauncherAbout {
+	font-family: 'jolas.Typing';
+	font-size: 22px;
+}
+
+.joLauncherAbout b {
+	font-style:normal;
+	color: #5489DB;
+}
+
+#aboutInside .neon {
+	color: green;
+	font-weight: bold;
+}
+
+#aboutInside .sket {
+	color: darkblue;
+	font-weight: bold;
+}
+
+#aboutInside .especula {
+	color: #5489DB;
+}

@@ -5,7 +5,7 @@ import * as sciter from "@sciter";
 var isOnline = true;
 var isSelectedDL = false;
 var masterserver = "http://neontflame.especulamente.com.br/jolas";
-var versao = "2.0.1";
+var versao = "2.0.2";
 
 document.getElementById("versionHere").innerText = versao;
 

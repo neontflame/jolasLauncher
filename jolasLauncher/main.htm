@@ -9,13 +9,14 @@
 	</head>
 	
 	<header>
-	<caption role="window-caption"><img src="elementos/jolauncherEscrita.png"/></caption>
+	<caption role="window-caption" id="winCaption"><img src="elementos/jolauncherEscrita.png"/></caption>
 	<div style="float: right; margin-top: -27px; margin-right: 2px;">
 		<a role="window-minimize" id="botaoMinimizar" class="coolButt" href="#" style="margin-right: 2px;">_</a>
 		<a role="window-close" id="botaoFechar" class="coolButt vermelho" href="#">X</a>
 	</div>
 	
 	<script>
+	  document.on("click", "#winCaption", () => Window.this.activate(true));
 	  document.on("click", "#botaoFechar", () => Window.this.close());
 	  document.on("click", "#botaoMinimizar", () => Window.this.state = Window.WINDOW_MINIMIZED);
 	</script>

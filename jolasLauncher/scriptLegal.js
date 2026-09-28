@@ -5,7 +5,7 @@ import * as sciter from "@sciter";
 var isOnline = true;
 var isSelectedDL = false;
 var masterserver = "http://neontflame.especulamente.com.br/jolas";
-var versao = "2.0.0";
+var versao = "2.0.1";
 
 document.getElementById("versionHere").innerText = versao;
 
@@ -81,14 +81,16 @@ async function verificarVersaoLauncher() {
 			throw new Error(`deu pane: ${response.status}`);
 		}
 		var versaoCheck = await response.text();
+		
 		if (versao != versaoCheck) {
 			var pregunta = Window.this.modal(<question caption="Versão nova do launcher">{ "Há uma versão nova do launcher disponível! (" + versaoCheck + ")\nVocê gostaria de baixá-la?" }</question>);
 			
-			if (pregunta === "ok") {
-				abrirAtualizador();
+			if (pregunta == "yes") {
+				await abrirAtualizador();
 			}
 		}
 	} catch (error) {
+		console.log(error);
 	}
 }
 
@@ -96,14 +98,19 @@ async function abrirAtualizador() {
 	document.getElementById("fileStatus").innerHTML = 'Abrindo o atualizador...';
 	document.getElementById("fileStatus").style.display = 'block';
 	
-	var exePath = pastaDestino + "/jolasLauncherUpdate.exe";
-	if (env.PLATFORM == 'Linux') {
-		exePath = pastaDestino + "/jolasLauncherUpdate";
+	try {
+		var exePath = env.home() + "/jolasLauncherUpdate.exe";
+		if (env.PLATFORM == 'Linux') {
+			exePath = env.home() + "/jolasLauncherUpdate";
+		}
+		
+		await env.exec(exePath);
+		
+		Window.this.close();
+	} catch (e) {
+		console.log('fuck');
+		console.log(e);
 	}
-	
-	env.launch(exePath);
-	
-	Window.this.close();
 }
 
 async function exeExistsSetup() {

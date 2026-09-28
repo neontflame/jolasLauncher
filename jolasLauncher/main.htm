@@ -1,14 +1,28 @@
 <!DOCTYPE html>
-<html window-width="496dip" window-height="616dip" window-resizable="false">
+<html window-width="480px" window-height="597px" window-resizable="false" window-frame="extended">
 	<head>
 		<title>jolas.: Launchers Abound</title>
 		<meta content="pt-br" http-equiv="Content-Language">
 		<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
 		<link rel="stylesheet" href="cssManeirao.css">
+		<link rel="stylesheet" href="cssEspeculamente.css">
 	</head>
 	
+	<header>
+	<caption role="window-caption"><img src="elementos/jolauncherEscrita.png"/></caption>
+	<div style="float: right; margin-top: -27px; margin-right: 2px;">
+		<a role="window-minimize" id="botaoMinimizar" class="coolButt" href="#" style="margin-right: 2px;">_</a>
+		<a role="window-close" id="botaoFechar" class="coolButt vermelho" href="#">X</a>
+	</div>
+	
+	<script>
+	  document.on("click", "#botaoFechar", () => Window.this.close());
+	  document.on("click", "#botaoMinimizar", () => Window.this.state = Window.WINDOW_MINIMIZED);
+	</script>
+	
+	</header>
+	
 	<body>
-		<img src="elementos/jolauncherEscrita.png"/>
 		<img src="elementos/jolas_versao_eu_nao_sei_mano_dsculpa.png"/>
 		
 		<div class="bodier">

@@ -1,0 +1,58 @@
+/* woaw botoes ! */
+
+.coolButt {
+	margin-top: 3px;
+	background-color: #d6ebff;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #5d85e2;
+
+	/* font-family: "Verdana"; */
+}
+
+a.coolButt {
+	display: inline-block;
+	box-sizing: border-box;
+	text-decoration: none;
+	padding: 1px 6px;
+	text-align: center;
+	color: black;
+}
+
+.coolButt:hover {
+	background-color: aliceblue;
+}
+
+.coolButt:active {
+	background-color: #b5dcff;
+}
+
+.vermelho {
+	background-color: #ffb7b2; 
+	border-color: #e2665d;
+}
+
+.vermelho:hover {
+	background-color: #fff0f2;
+}
+
+.vermelho:active {
+	background-color: #ff938c;
+}
+
+.verde {
+	background-color: #b2ffd3;
+	border-color: #4de287;
+}
+
+.verde:hover {
+	background-color: #ddffeb;
+}
+
+.verde:active {
+	background-color: #60ffa0;
+}
+
+.grandissimo {
+	width: 99%;
+}

@@ -1,0 +1,1 @@
+"E:/sciter-js-sdk-4.4.8.34/bin/windows/x32/scapp.exe" main.htm --debug

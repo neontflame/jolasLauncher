@@ -5,7 +5,7 @@ import * as sciter from "@sciter";
 var isOnline = true;
 var isSelectedDL = false;
 var masterserver = "http://neontflame.especulamente.com.br/jolas";
-var versao = "2.0.2";
+var versao = "2.0.3";
 
 document.getElementById("versionHere").innerText = versao;
 
@@ -280,7 +280,7 @@ async function loadIniConfig() {
 		var text = sciter.decode(buffer, "utf-8");
 		var parsed = parseIniString(text);
 		
-		pastaDestino = parsed.jolasLauncher.JolasFolder;
+		pastaDestino = parsed.jolasLauncher.JolasFolder.replaceAll("\\", "/");
 		linguagem = parsed.jolasLauncher.Language;
 		
 		servidorPermitido = (parsed.Hosting.IsServer == 'Yes' ? true : false);
